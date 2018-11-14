@@ -62,36 +62,43 @@ NOTE:-I often find people try and write their pipes all out in one go and make a
 
 
 2. return lines that matches a pattern of your choice.
-grep [REP] filename.txt
+grep [MyPattern] filename.txt
 
 3. return lines that does not matches the pattern of your choice.
-grep ^[REP] filename.txt
+grep ^[MyPattern] filename.txt
 
 4. Perform a recursive search on a pattern your choice.
-grep -r [REP] .
+grep -r [MyPattern] .
 
 5. Perform a case-insensitive search on a pattern of your choice.
-grep -i [REP]  filename.txt
+grep -i [MyPattern]  filename.txt
 
 6. Find the lines that matches a pattern of your choice, but display only the first 3 lines out of all the lines mathed.
-grep -m3 [REP] filename.txt
+grep -m3 [MyPattern] filename.txt
 
 7. Find out how many times a particular word appears in the file.
-grep -o 'example' filename | wc -l
+grep -o 'abc' filename | wc -l
 
 8. Use plato_republic.txt file, and display all the line that starts with "Republic".
+grep '^Republic' plato_republic.txt
 
 9. Use Plato_republic.txt file, and display all the lines that ends with "Republic".
+grep '$Republic' plato_republic.txt
 
 10. Use plato_republic.txt file, and display the number of lines that has word "republic".
+grep 'republic' plato_republic.txt | wc -l
 
 11. Use plato_republic.txt file, and display all the lines that begins with either a or A or b or B
+grep -i '^[ab]' plato_republic.txt
 
 12. Use plato_republic.txt file, and display all the lines that does not begins with either a or A or b or B
+grep -i '^[^ab]' plato_republic.txt 
  
 13. Use plato_republic.txt file, and display all the lines that has "h" or "H" as the second character.
+grep -i '^.h' plato_republic.txt
 
 14. Use plato_republic.txt file, and display all the lines that has internet web address
+grep -i 'www*' plato_republic.txt
 
 15. Sort the listing of a directory "/etc" so that all the directories are listed first.
 
